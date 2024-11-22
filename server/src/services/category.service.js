@@ -22,7 +22,7 @@ class CategoryService {
   }
 
   async deleteCategory({ params }) {
-    return this.categoryRepository.delete(params.id)
+    return this.categoryRepository.delete({ _id: params.id })
   }
 }
 

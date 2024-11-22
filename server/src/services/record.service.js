@@ -22,7 +22,7 @@ class RecordService {
   }
 
   async deleteRecord({ params }) {
-    return this.recordRepository.delete(params.id)
+    return this.recordRepository.delete({ _id: params.id })
   }
 }
 

@@ -28,7 +28,7 @@ class BookService {
   }
 
   async deleteBook({ params }) {
-    return this.bookRepository.delete(params.id)
+    return this.bookRepository.delete({ _id: params.id })
   }
 }
 
